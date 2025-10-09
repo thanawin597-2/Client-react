@@ -43,7 +43,16 @@ const Admin = () => {
                 >
                     Manage Bookings
                 </Link>
-                <Link to={"/revenue-summary"}>Revenue Summary</Link>
+                <Link to={"/revenue-summary"}
+                 className="btn btn-light btn-lg w-50"
+					style={{
+						backgroundColor: "#0057B7", 
+						padding: "15px 30px",
+						borderRadius: "8px",
+						color: "#fff",
+						textDecoration: "none",
+						fontSize: "1.2rem",
+					}}>Revenue Summary</Link>
             </div>
         </section>
     
