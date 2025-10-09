@@ -24,46 +24,56 @@ import RevenueSummary from "./components/admin/RevenueSummary"
 function App() {
 	return (
 		<AuthProvider>
-			<main>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					minHeight: "100vh",
+				}}
+			>
 				<Router>
 					<NavBar />
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/edit-room/:roomId" element={<EditRoom />} />
-						<Route path="/existing-rooms" element={<ExistingRooms />} />
-						<Route path="/add-room" element={<AddRoom />} />
+					<main style={{ flex: 1 }}>
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/edit-room/:roomId" element={<EditRoom />} />
+							<Route path="/existing-rooms" element={<ExistingRooms />} />
+							<Route path="/add-room" element={<AddRoom />} />
 
-						<Route
-							path="/book-room/:roomId"
-							element={
-								<RequireAuth>
-									<Checkout />
-								</RequireAuth>
-							}
-						/>
-						<Route path="/browse-all-rooms" element={<RoomListing />} />
+							<Route
+								path="/book-room/:roomId"
+								element={
+									<RequireAuth>
+										<Checkout />
+									</RequireAuth>
+								}
+							/>
 
-						<Route path="/admin" element={<Admin />} />
-						<Route path="/booking-success" element={<BookingSuccess />} />
-						<Route path="/existing-bookings" element={<Bookings />} />
-						<Route path="/find-booking" element={<FindBooking />} />
-
-						<Route path="/login" element={<Login />} />
-						<Route path="/register" element={<Registration />} />
-
-						<Route path="/profile" element={<Profile />} />
-						<Route path="/logout" element={<FindBooking />} />
-						<Route 
-						path="/revenue-summary" 
-						element={<RequireAuth>
-							<RevenueSummary />
-							</RequireAuth>}/>
-					</Routes>
+							<Route path="/browse-all-rooms" element={<RoomListing />} />
+							<Route path="/admin" element={<Admin />} />
+							<Route path="/booking-success" element={<BookingSuccess />} />
+							<Route path="/existing-bookings" element={<Bookings />} />
+							<Route path="/find-booking" element={<FindBooking />} />
+							<Route path="/login" element={<Login />} />
+							<Route path="/register" element={<Registration />} />
+							<Route path="/profile" element={<Profile />} />
+							<Route path="/logout" element={<FindBooking />} />
+							<Route
+								path="/revenue-summary"
+								element={
+									<RequireAuth>
+										<RevenueSummary />
+									</RequireAuth>
+								}
+							/>
+						</Routes>
+					</main>
+					<Footer />
 				</Router>
-			</main>
-			<Footer />
+			</div>
 		</AuthProvider>
 	)
 }
+
 
 export default App
