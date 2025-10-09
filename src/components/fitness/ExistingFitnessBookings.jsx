@@ -103,7 +103,7 @@ const formatTime = (timeString) => {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4 text-primary">ALL BOCKINGS FITNESS</h2>
+            <h2 className="text-center mb-4 text-primary">ALL BOOKINGS FITNESS</h2>
             
             {successMessage && ( 
                 <Alert variant="success" className="text-center">{successMessage}</Alert>

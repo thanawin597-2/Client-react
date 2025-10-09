@@ -13,8 +13,8 @@ const RoomCard = ({ room }) => {
 							<Card.Img
 								variant="top"
 
-								//src={`data:image/png;base64, ${room.photo}`}
-								src={room7}
+								src={`data:image/png;base64, ${room.photo}`}
+								// src={room7}
 
 								alt="Room Photo"
 								style={{ width: "100%", maxWidth: "200px", height: "auto" }}

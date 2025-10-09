@@ -38,13 +38,13 @@ const RoomCarousel = () => {
             <Carousel.Item key={index}>
               <Row>
                 {rooms.slice(index * 4, index * 4 + 4).map((room) => (
-                  <Row key={room.id} xs={12} md={6} lg={4} className="mb-4">
+                  <Col key={room.id} xs={12} md={6} lg={4} className="mb-4">
                     <Card className="card_room ้-100">
                       <Link to={`/book-room/${room.id}`}>
                         <Card.Img
                           variant="top"
-                          //src={`data:image/png;base64, ${room.photo}`}
-                          src={room7}
+                          src={`data:image/png;base64, ${room.photo}`}
+                          // src={room7}
                           alt="Room Photo"
                           className="w-100"
                           style={{ height: "200px" }}
@@ -60,7 +60,7 @@ const RoomCarousel = () => {
                         </div>
                       </Card.Body>
                     </Card>
-                  </Row>
+                  </Col>
                 ))}
               </Row>
             </Carousel.Item>
