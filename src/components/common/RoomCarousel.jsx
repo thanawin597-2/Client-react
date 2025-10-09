@@ -1,79 +1,94 @@
-import React, { useEffect, useState } from "react"
-import { getAllRooms } from "../utils/ApiFunctions"
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { getAllRooms } from "../utils/ApiFunctions";
+import { Link } from "react-router-dom";
 import room7 from "../../assets/images/room7.jpg";
-import { Card, Carousel, Col, Container, Row } from "react-bootstrap"
+import { Card, Container } from "react-bootstrap";
 
 const RoomCarousel = () => {
-  const [rooms, setRooms] = useState([{ id: "", roomType: "", roomPrice: "", photo: "" }])
-  const [errorMessage, setErrorMessage] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
+  const [rooms, setRooms] = useState([{ id: "", roomType: "", roomPrice: "", photo: "" }]);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     getAllRooms()
       .then((data) => {
-        setRooms(data)
-        setIsLoading(false)
+        setRooms(data);
+        setIsLoading(false);
       })
       .catch((error) => {
-        setErrorMessage(error.message)
-        setIsLoading(false)
-      })
-  }, [])
+        setErrorMessage(error.message);
+        setIsLoading(false);
+      });
+  }, []);
 
   if (isLoading) {
-    return <div className="mt-5">Loading rooms....</div>
+    return <div className="mt-5">Loading rooms....</div>;
   }
+
   if (errorMessage) {
-    return <div className=" text-danger mb-5 mt-5">Error : {errorMessage}</div>
+    return <div className="text-danger mb-5 mt-5">Error : {errorMessage}</div>;
   }
 
   return (
     <section className="bg-light mb-5 mt-5 shadow">
-      
       <Container>
-        <Carousel indicators={false}>
-          {[...Array(Math.ceil(rooms.length / 4))].map((_, index) => (
-            <Carousel.Item key={index}>
-              <Row>
-                {rooms.slice(index * 4, index * 4 + 4).map((room) => (
-                  <Col key={room.id} xs={12} md={6} lg={4} className="mb-4">
-                    <Card className="card_room ้-100">
-                      <Link to={`/book-room/${room.id}`}>
-                        <Card.Img
-                          variant="top"
-                          src={`data:image/png;base64, ${room.photo}`}
-                          // src={room7}
-                          alt="Room Photo"
-                          className="w-100"
-                          style={{ height: "200px" }}
-                        />
-                      </Link>
-                      <Card.Body>
-                        <Card.Title className="hotel-color">{room.roomType}</Card.Title>
-                        <Card.Title className="room-price">${room.roomPrice}/night</Card.Title>
-                        <div className="flex-shrink-0">
-                          <Link to={`/book-room/${room.id}`} className="btn btn-hotel btn-sm">
-                            Book Now
-                          </Link>
-                        </div>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
+        <h3 className="mb-4 pt-3 hotel-color">Available Rooms</h3>
+
+        <div
+          style={{
+            display: "flex",
+            overflowX: "auto",
+            gap: "1rem",
+            scrollBehavior: "smooth",
+            paddingBottom: "10px",
+          }}
+        >
+          {rooms.map((room) => (
+            <Card
+              key={room.id}
+              className="card_room h-100 flex-shrink-0"
+              style={{ minWidth: "250px", maxWidth: "250px" }}
+            >
+              <Link to={`/book-room/${room.id}`}>
+                <Card.Img
+                  variant="top"
+                  src={
+                    room.photo
+                      ? `data:image/png;base64,${room.photo}`
+                      : room7
+                  }
+                  alt="Room Photo"
+                  style={{
+                    height: "180px",
+                    objectFit: "cover",
+                  }}
+                />
+              </Link>
+              <Card.Body className="d-flex flex-column justify-content-between">
+                <div>
+                  <Card.Title className="hotel-color">{room.roomType}</Card.Title>
+                  <Card.Title className="room-price">${room.roomPrice}/night</Card.Title>
+                </div>
+                <Link
+                  to={`/book-room/${room.id}`}
+                  className="btn btn-hotel btn-sm mt-2"
+                >
+                  Book Now
+                </Link>
+              </Card.Body>
+            </Card>
           ))}
-        </Carousel>
+        </div>
       </Container>
 
-	  <Link to={"/browse-all-rooms"} /*{className="hote-color text-center"}*/className="btn btn-hotel text-center  mb-4 ml-4" >
-        Browse all rooms
-      </Link>
-
+      <div className="text-center mt-4 mb-4">
+        <Link to={"/browse-all-rooms"} className="btn btn-hotel">
+          Browse all rooms
+        </Link>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default RoomCarousel
+export default RoomCarousel;
