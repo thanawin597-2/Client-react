@@ -267,7 +267,7 @@ export async function createFitnessBooking(booking) {
 
 export async function getAllFitnessBookings() {
     try {
-        const result = await api.get("/fitness/admin/all-bookings", {
+        const result = await api.get("/api/fitness/admin/all-bookings", {
             headers: getHeader() // ต้องส่ง Header เพื่อยืนยันตัวตน Admin
         });
         return result.data;
@@ -281,7 +281,7 @@ export async function getAllFitnessBookings() {
 
 export async function deleteBooking(bookingId) {
     try {
-        const response = await api.delete(`/fitness/delete/booking/${bookingId}`); 
+        const response = await api.delete(`/api/fitness/delete/booking/${bookingId}`); 
         return response.data; 
     } catch (error) {
         throw new Error(error.response?.data?.message || `Request failed with status code ${error.response?.status}`);
