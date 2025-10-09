@@ -60,7 +60,7 @@ const RevenueSummary = () => {
       labels: ["Total Revenue"],
       datasets: [{
         data: [totalRevenue],
-        backgroundColor: ["#36A2EB"],
+        backgroundColor: ["#0057B7"],
       }],
     } : {
       labels: [format(startDate, "dd/MM")],
