@@ -46,7 +46,7 @@ const Footer = () => {
         <Row>
           <Col md={4} className="mb-4">
             <a href="javascript:void(0);">
-              <h5 style={{ fontWeight: 'bold', color: '#fff', textDecoration: 'none' }}>Love Hotel</h5>
+              <h5 style={{ fontWeight: 'bold', color: '#fff', textDecoration: 'none', backgroundColor:'#0057B7'}}>Love Hotel</h5>
             </a>
             <p style={{ marginTop: '10px', fontSize: '14px', lineHeight: '1.5' }}>
               123/45 Thanon Sooksan ,<br />
