@@ -131,7 +131,7 @@ const FitnessBookingPage = () => {
         try {
             // 🌟🌟 ใช้ฟังก์ชัน API ที่ถูกต้อง (ชี้ไปที่ Port 9192) 🌟🌟
             const result = await createFitnessBooking(newBooking);
-            setSuccessMessage(`Booking Successf!`);
+            setSuccessMessage(`Booking Success!`);
             
             // เคลียร์ฟอร์มบางส่วนและรีเฟรชตารางเวลา
             setNewBooking((prev) => ({
