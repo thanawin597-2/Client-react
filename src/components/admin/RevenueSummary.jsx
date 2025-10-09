@@ -84,7 +84,7 @@ const RevenueSummary = () => {
     <div>
       { <style>{`
 
-        .container {
+        .container-2 {
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
@@ -93,7 +93,7 @@ const RevenueSummary = () => {
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
            margin-bottom: 120px;
         }`}</style> }
-      <div className="container">
+      <div className="container-2">
         <h2 className="text-center mb-4">สรุปรายรับรายจ่าย</h2>
         
         {/* Filter Period */}
