@@ -91,9 +91,8 @@ const RevenueSummary = () => {
           background-color: #0057B7;
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-      `}</style> }
+           margin-bottom: 120px;
+        }`}</style> }
       <div className="container">
         <h2 className="text-center mb-4">สรุปรายรับรายจ่าย</h2>
         
