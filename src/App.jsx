@@ -53,14 +53,11 @@ function App() {
 
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/logout" element={<FindBooking />} />
-						<Route
-              path="/revenue-summary"
-              element={
-                <RequireAuth>
-                  <RevenueSummary />
-                </RequireAuth>
-              }
-            />
+						<Route 
+						path="/revenue-summary" 
+						element={<RequireAuth>
+							<RevenueSummary />
+							</RequireAuth>}/>
 					</Routes>
 				</Router>
 			</main>
