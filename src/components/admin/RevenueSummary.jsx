@@ -82,8 +82,8 @@ const RevenueSummary = () => {
 
   return (
     <div>
-      <style>{`
-        /* RevenueSummary Styles */
+      {/* <style>{`
+       
         .container {
           max-width: 1200px;
           margin: 0 auto;
@@ -101,7 +101,7 @@ const RevenueSummary = () => {
           margin-bottom: 30px;
         }
 
-        /* Filter Section */
+       
         .row.mb-3 {
           background-color: #fff;
           border: 1px solid #dee2e6;
@@ -148,7 +148,7 @@ const RevenueSummary = () => {
           border-color: #6c757d;
         }
 
-        /* Summary Table */
+        
         .row.mb-3 .col-md-12 {
           background-color: #fff;
           border: 1px solid #dee2e6;
@@ -186,7 +186,7 @@ const RevenueSummary = () => {
           background-color: #e9ecef;
         }
 
-        /* Error and Info Messages */
+        
         .alert {
           border-radius: 6px;
           border: none;
@@ -206,7 +206,7 @@ const RevenueSummary = () => {
           margin-top: 15px;
         }
 
-        /* Chart Section */
+        
         .row .col-md-12 {
           background-color: #fff;
           border: 1px solid #dee2e6;
@@ -220,7 +220,7 @@ const RevenueSummary = () => {
           max-height: 400px;
         }
 
-        /* Responsive Adjustments */
+       
         @media (max-width: 768px) {
           .container {
             padding: 10px;
@@ -240,7 +240,7 @@ const RevenueSummary = () => {
             margin-top: 10px;
           }
         }
-      `}</style>
+      `}</style> */}
       <div className="container">
         <h2 className="text-center mb-4">สรุปรายรับรายจ่าย</h2>
         
