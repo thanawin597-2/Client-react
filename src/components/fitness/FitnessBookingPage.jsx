@@ -36,7 +36,7 @@ const FitnessBookingPage = () => {
         for (let hour = 9; hour < 20; hour++) {
             const startTime = format(new Date(2000, 0, 1, hour, 0), 'HH:mm');
             const endTime = format(new Date(2000, 0, 1, hour + 1, 0), 'HH:mm');
-            const slot = $`{startTime} - ${endTime}`;
+            const slot = `${startTime} - ${endTime}`;
             
             // ตรวจสอบว่าช่วงเวลานี้ถูกจองแล้วหรือไม่
             // bookedTimes คือ List<String> ของ startTime (เช่น ["13:00", "15:00"])
@@ -239,8 +239,7 @@ const FitnessBookingPage = () => {
       </Form>
     </div>
   </div>
-);
-
+        );
 };
 
 export default FitnessBookingPage;
