@@ -20,6 +20,8 @@ import Profile from "./components/auth/Profile"
 import { AuthProvider } from "./components/auth/AuthProvider"
 import RequireAuth from "./components/auth/RequireAuth"
 import RevenueSummary from "./components/admin/RevenueSummary"
+import FitnessBookingPage from "./components/fitness/FitnessBookingPage" 
+import ExistingFitnessBookings from './components/fitness/ExistingFitnessBookings';
 
 function App() {
 	return (
@@ -48,7 +50,11 @@ function App() {
 									</RequireAuth>
 								}
 							/>
-
+							<Route
+							path="/existing-fitness-bookings" 
+							element={<ExistingFitnessBookings />}
+							/>
+							<Route path="/fitness" element={<FitnessBookingPage />} />
 							<Route path="/browse-all-rooms" element={<RoomListing />} />
 							<Route path="/admin" element={<Admin />} />
 							<Route path="/booking-success" element={<BookingSuccess />} />
