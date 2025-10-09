@@ -72,6 +72,7 @@ main {
  .btn-hotel{
   color: #fff;
   margin-left: 15px;
+  margin-bottom: 15px;
   }
   .btn-hotel:hover{
   background-color: rgb(91, 125, 210);
