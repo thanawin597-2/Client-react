@@ -88,7 +88,7 @@ const RevenueSummary = () => {
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
-          background-color: #0057B7;
+          background-color: #ffffffff;
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
            margin-bottom: 120px;
