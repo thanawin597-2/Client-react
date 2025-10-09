@@ -53,6 +53,20 @@ const Admin = () => {
 						textDecoration: "none",
 						fontSize: "1.2rem",
 					}}>Revenue Summary</Link>
+                    <Link
+                    to={"/existing-fitness-bookings"} 
+                     className="btn btn-secondary btn-lg w-50"
+                     style={{
+                        backgroundColor: "#0057B7", 
+                        padding: "15px 30px",
+                        borderRadius: "8px",
+                        color: "#fff",
+                        textDecoration: "none",
+                        fontSize: "1.2rem",
+                    }}
+              >
+                Manage Fitness Bookings
+                 </Link>
             </div>
         </section>
     

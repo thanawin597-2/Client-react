@@ -238,3 +238,53 @@ export async function getRevenueSummary(startDate, endDate) {
     }
   }
 }
+/* This function gets all booked fitness slots for a specific date */
+export async function getBookedFitnessSlots(date) {
+    try {
+        // ใช้ api.get() ซึ่งจะต่อกับ baseURL: "http://localhost:9192" ให้อัตโนมัติ
+        const response = await api.get(`/api/fitness/bookings/byDate?date=${date}`) 
+        return response.data
+    } catch (error) {
+        // Console Log ที่เราเห็นใน Browser น่าจะมาจาก Error ในส่วนนี้
+        throw new Error("Error fetching available fitness slots: " + error.message)
+    }
+}
+
+/* This function saves a new fitness booking to the database */
+export async function createFitnessBooking(booking) {
+    try {
+        const response = await api.post("/api/fitness/bookings", booking)
+        return response.data
+    } catch (error) {
+        if (error.response && error.response.data) {
+            // ส่งข้อความ Error จาก Backend กลับไป (เช่น ช่วงเวลาเต็ม)
+            throw new Error(error.response.data) 
+        } else {
+            throw new Error(`Error booking fitness slot: ${error.message}`)
+        }
+    }
+}
+
+export async function getAllFitnessBookings() {
+    try {
+        const result = await api.get("/api/fitness/admin/all-bookings", {
+            headers: getHeader() // ต้องส่ง Header เพื่อยืนยันตัวตน Admin
+        });
+        return result.data;
+    } catch (error) {
+        if (error.response && error.response.status === 403) {
+             throw new Error("ไม่มีสิทธิ์เข้าถึง: ต้องเป็นผู้ดูแลระบบ (Admin)");
+        }
+        throw new Error(`Error fetching all fitness bookings: ${error.message}`);
+    }
+}
+
+export async function deleteBooking(bookingId) {
+    try {
+        const response = await api.delete(`/api/fitness/delete/booking/${bookingId}`); 
+        return response.data; 
+    } catch (error) {
+        throw new Error(error.response?.data?.message || `Request failed with status code ${error.response?.status}`);
+    }
+}
+

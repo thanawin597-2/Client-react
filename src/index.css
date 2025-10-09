@@ -275,6 +275,14 @@ h2{
 .h3-parallax{
   font-size: 50px;
 }
+.span-1{
+  font-size: small;
+  color: rgb(186, 0, 25);
+}
+.table-1 {
+  background-color: #0057B7 !important;
+  color: white !important;
+}
 
 
 
