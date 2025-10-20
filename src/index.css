@@ -1,0 +1,450 @@
+html {
+    height: 100%; 
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#root {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+main {
+    flex-grow: 1; 
+}
+
+.card {
+  opacity: 0.9;
+}
+
+/* Navigation bar definitions */
+ .navbar{
+  padding: 0;
+ }
+ .navbar .navbar-nav .nav-link{
+  padding: 1em;
+  
+ }
+ .navbar .navbar-nav .nav-item{
+  position: relative;
+ }
+
+ .navbar .navbar-nav .nav-item::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+
+  /*background-color:rgb(169, 77, 123) ;*/
+  background-color: #0057B7; /*แก้ hover navbar*/
+
+  width: 0;
+  margin: 0 auto;
+  height: 4px;
+  transition: all .5s;
+ }
+ .navbar .navbar-nav .nav-item:hover::after{
+  width: 100%;
+ }
+ .navbar-dark .navbar-nav .nav-link {
+  color: rgb(25, 24, 24);
+}
+
+.navbar-dark .navbar-brand {
+  color: rgb(25, 24, 24);
+}
+
+ @media screen and (min-width: 992px){
+  .navbar{
+  padding: 0;
+ }
+ .navbar .navbar-nav .nav-link{
+  padding: 1em 0;
+ }
+ .navbar .navbar-nav .nav-item{
+  margin: 0 1em;
+ }
+ }
+
+  /* Hotel custom color */
+ .btn-hotel{
+  color: #fff;
+  margin-left: 15px;
+  }
+  .btn-hotel:hover{
+  background-color: rgb(91, 125, 210);
+  color: #fff;
+  transition: 0.7s;
+  outline-color: transparent;
+  outline-style:solid;
+  margin-left: 15px;
+  }
+
+  .hotel-color{
+    color: #0057B7;
+    padding-bottom: 25px;
+  }
+  .room-price{
+    color:darkgoldenrod;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:medium;
+  }
+  .vertical-rule{
+    border-left: '0.5px solid black';
+    height: '100vh'
+  }
+
+
+
+ /*code ที่แก้ไขและเพิ่ม*/
+.h2_login{
+  color: #0057B7 !important;
+}
+ .b-flex .ml-2{
+    margin-left: 25px;
+    background-color: #0057B7;
+}
+.f-1{
+  margin-bottom: -40px;
+  color: #0057B7;
+}
+.pa-1{
+  text-shadow: none;
+}
+.card_room{
+  margin: 15px;             /* ระยะห่างรอบการ์ด */
+  border-radius: 10px;      /* มุมโค้ง */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เงา */
+}
+.m1{
+  text-align: center;
+}
+.btn-hotel{
+  background-color: #0057B7;
+
+}
+.clear-search-button {
+    padding: 10px 25px;
+    font-size: 16px;
+    width: 150px;
+    padding: 10px 25px !important; 
+
+}
+.form-select option:hover {
+    background-color: #0057B7; /* สีพื้นหลังใหม่ (เช่น สีน้ำเงิน) */
+    color: white; /* สีข้อความ (เป็นสีขาว) */
+}
+.form-select option:checked {
+    background-color: #0057B7; /* สีใหม่ */
+    color: white;
+}
+.container{
+   /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
+   padding-bottom: 20px;
+}
+.login-page-bg {
+    background-image: url('./assets/images/hotel_4.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    padding: 50px 0 50px; 
+    position: relative;
+    filter: none;
+    -webkit-filter: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*.login-page-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}*/
+.login-form-container {
+    background-color: rgba(255, 255, 255);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-custom-navbar {
+    background-color: #fff !important; 
+}
+.animated-texts{
+  animation-duration: 1s;
+   margin-top: -100px;
+}
+h2{
+  color: #0057B7;
+}
+.hr-hotel-color {
+    border: none;
+    border-top: 2px solid #0057B7;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.button.btn.btn-secondary{
+  background-color: #0057B7 !important;
+}
+.button-group-center {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/*admin*/
+.admin-section {
+  background-color: #0057B7;
+  padding: 40px 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.admin-section hr {
+  border-color: #fff;
+}
+
+.admin-links .btn-custom {
+  width: 50%;
+  font-size: 1.25rem; 
+}
+
+@media (max-width: 768px) {
+  .admin-links .btn-custom {
+    width: 80%;
+  }
+}
+
+
+/*bookingForm*/
+.hotel-color {
+    color: #0057B7 !important;
+}
+
+/* สไตล์สำหรับปุ่มหลัก */
+.btn-hotel {
+    background-color: #0057B7 !important;
+    color: white !important;
+    border-color: #0057B7 !important;
+    transition: background-color 0.2s ease;
+}
+
+/* สไตล์เมื่อนำเมาส์ไปชี้ที่ปุ่ม */
+.btn-hotel:hover {
+    background-color: #004691 !important; /* สีน้ำเงินเข้มขึ้นเล็กน้อย */
+    border-color: #004691 !important;
+}
+
+/* สไตล์สำหรับเส้นขอบรอบ Fieldset (ดูสวยงามขึ้น) */
+.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    width: inherit; /* ทำให้เส้นขอบล้อมรอบเนื้อหาเท่านั้น */
+    padding: 0 10px;
+    border-bottom: none;
+}
+.carousel-image {
+    height: 600px;
+    object-fit: cover;
+}
+.parallax {
+    .carousel-item img {
+        height: 600px; 
+        object-fit: cover;
+    }
+}
+.p-parallax{
+  text-shadow: none;
+  font-size: 20px;
+}
+.h3-parallax{
+  font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  position: relative;
+  height: 150px;
+  background-size: cover;
+  background-image: url("./assets/images/hotel_02.png");
+
+  background-position: center center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.header-title {
+    color: #ffffff; 
+
+    font-size: 4rem; 
+    font-weight: bold;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8); 
+}
+
+.parallax {
+  margin-top: 50px;
+  color: white;
+  text-shadow: 2px 2px black;
+  /*background-image: url("./assets/images/hotel6.png");*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ /* background-size: cover;*/
+  
+ /*height: 50vh;*/
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated {
+  animation-duration: 1s;
+}
+
+.animated-texts h1 {
+  animation: fadeInDown 1s ease-in-out;
+  font-size: 2.5rem; /* ขนาดใหญ่ตามต้องการ */
+  font-weight: bold;
+  color: #ffffff;
+  /*text-shadow: 1px 1px 8px rgb(0, 0, 0)*/
+}
+
+.animated-texts p, h1, h2 ,h4{
+  animation: fadeInUp 1s ease-in-out;
+  
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 60% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Header overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+  }
+ .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+    color: #fff;
+    justify-content: flex-start;
+  }
+    
+
+/* The header banner */
+.header-banner {
+  background-image:  url("./assets/images/hotel_4.png");
+   background-size: cover;
+  background-position: center;
+   position: relative;
+  height: 80vh;
+ }
+
+.header-banner {
+  position: relative;
+  height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-banner h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-banner h1 {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0057B7;
+  height: 60px;
+  text-align: center;
+}
+
+
+
+
