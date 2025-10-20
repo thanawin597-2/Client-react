@@ -4,7 +4,7 @@ import DateSlider from "../common/DateSlider"
 
 const BookingsTable = ({ bookingInfo, handleBookingCancellation }) => {
 	const [filteredBookings, setFilteredBookings] = useState(bookingInfo)
-
+//Tableroom
 	const filterBooknigs = (startDate, endDate) => {
 		let filtered = bookingInfo
 		if (startDate && endDate) {
@@ -74,5 +74,4 @@ const BookingsTable = ({ bookingInfo, handleBookingCancellation }) => {
 		</section>
 	)
 }
-
 export default BookingsTable

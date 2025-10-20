@@ -92,5 +92,4 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
 		</div>
 	)
 }
-
 export default BookingSummary

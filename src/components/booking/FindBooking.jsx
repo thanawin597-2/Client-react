@@ -93,7 +93,7 @@ const FindBooking = () => {
                     </div>
                 )}
 
-                {/* Form Input */}
+                {}
                 <form onSubmit={handleFormSubmit} className="d-flex mb-4">
                     <input
                         className="form-control rounded-start"
@@ -114,7 +114,7 @@ const FindBooking = () => {
                     </button>
                 </form>
 
-                {/* Loading State */}
+                {}
                 {isLoading ? (
                     <div className="text-center my-4">
                         <div className="spinner-border text-primary" role="status"></div>

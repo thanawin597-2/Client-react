@@ -26,5 +26,4 @@ const BookingSuccess = () => {
 		</div>
 	)
 }
-
 export default BookingSuccess

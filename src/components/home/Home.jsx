@@ -8,7 +8,6 @@ import { useLocation } from "react-router-dom"
 import { useAuth } from "../auth/AuthProvider"
 const Home = () => {
 	const location = useLocation()
-
 	const message = location.state && location.state.message
 	const currentUser = localStorage.getItem("userId")
 	return (
@@ -28,5 +27,4 @@ const Home = () => {
 		</section>
 	)
 }
-
 export default Home

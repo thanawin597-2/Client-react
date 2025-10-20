@@ -37,7 +37,7 @@ export async function addRoom(photo, roomType, roomPrice) {
 	}
 }
 
-/* This function gets all room types from thee database */
+
 export async function getRoomTypes() {
 	try {
 		const response = await api.get("/rooms/room/types")
@@ -46,7 +46,7 @@ export async function getRoomTypes() {
 		throw new Error("Error fetching room types")
 	}
 }
-/* This function gets all rooms from the database */
+
 export async function getAllRooms() {
 	try {
 		const result = await api.get("/rooms/all-rooms")
@@ -56,7 +56,7 @@ export async function getAllRooms() {
 	}
 }
 
-/* This function deletes a room by the Id */
+
 export async function deleteRoom(roomId) {
 	try {
 		const result = await api.delete(`/rooms/delete/room/${roomId}`, {
@@ -67,7 +67,7 @@ export async function deleteRoom(roomId) {
 		throw new Error(`Error deleting room ${error.message}`)
 	}
 }
-/* This function update a room */
+
 export async function updateRoom(roomId, roomData) {
 	const formData = new FormData()
 	formData.append("roomType", roomData.roomType)
@@ -79,7 +79,7 @@ export async function updateRoom(roomId, roomData) {
 	return response
 }
 
-/* This funcction gets a room by the id */
+
 export async function getRoomById(roomId) {
 	try {
 		const result = await api.get(`/rooms/room/${roomId}`)
@@ -89,7 +89,7 @@ export async function getRoomById(roomId) {
 	}
 }
 
-/* This function saves a new booking to the databse */
+
 export async function bookRoom(roomId, booking) {
 	try {
 		const response = await api.post(`/bookings/room/${roomId}/booking`, booking)
@@ -115,7 +115,7 @@ export async function getAllBookings() {
 	}
 }
 
-/* This function get booking by the cnfirmation code */
+
 export async function getBookingByConfirmationCode(confirmationCode) {
 	try {
 		const result = await api.get(`/bookings/confirmation/${confirmationCode}`)
@@ -129,7 +129,7 @@ export async function getBookingByConfirmationCode(confirmationCode) {
 	}
 }
 
-/* This is the function to cancel user booking */
+
 export async function cancelBooking(bookingId) {
 	try {
 		const result = await api.delete(`/bookings/booking/${bookingId}/delete`)
@@ -162,7 +162,7 @@ export async function registerUser(registration) {
 	}
 }
 
-/* This function login a registered user */
+
 export async function loginUser(login) {
 	try {
 		const response = await api.post("/auth/login", login)
@@ -177,7 +177,7 @@ export async function loginUser(login) {
 	}
 }
 
-/*  This is function to get the user profile */
+
 export async function getUserProfile(userId, token) {
 	try {
 		const response = await api.get(`users/profile/${userId}`, {

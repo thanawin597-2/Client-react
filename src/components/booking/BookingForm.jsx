@@ -6,14 +6,12 @@ import { bookRoom, getRoomById } from "../utils/ApiFunctions";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaCalendarCheck, FaInfoCircle, FaUserPlus, FaMoneyBillWave } from 'react-icons/fa';
 
-// สีธีมหลัก
+
 const PRIMARY_COLOR = "#0057B7";
 
 // *** Utility Function ที่ยังคงไว้ ***
 
-/**
- * ตรวจสอบความถูกต้องของจำนวนผู้เข้าพัก
- */
+
 const isGuestCountValid = (numOfAdults, numOfChildren) => {
     const adultCount = parseInt(numOfAdults || "0");
     const childrenCount = parseInt(numOfChildren || "0");
@@ -21,7 +19,7 @@ const isGuestCountValid = (numOfAdults, numOfChildren) => {
     return totalCount >= 1 && adultCount >= 1;
 };
 
-// **********************************************
+
 
 const BookingForm = () => {
     const { roomId } = useParams();

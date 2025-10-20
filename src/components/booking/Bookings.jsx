@@ -31,7 +31,6 @@ const Bookings = () => {
 			setError(error.message)
 		}
 	}
-
 	return (
 		<section style={{ backgroundColor: "whitesmoke" }}>
 			<Header title={"Existing Bookings"}/>
@@ -47,5 +46,4 @@ const Bookings = () => {
 		</section>
 	)
 }
-
 export default Bookings
